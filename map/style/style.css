@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Serif Display", serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+body .map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+}
+body .spot-tool__container {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  margin: 40px 0;
+  background-color: whitesmoke;
+  border: 5px;
+}
+body .spot-tool__container .spot-tool__button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+}
+body .spot-tool__container .spot-tool__button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+body .spot__popup {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(5, 5, 5, 0.3);
+  z-index: 2;
+}
+body .spot__popup .spot__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 440px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-top: 120px;
+  padding: 20px;
+  background-color: rgba(245, 245, 245, 0.6);
+  border-radius: 5px;
+}
+body .spot__popup .spot__container .spot__close-button {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  align-self: end;
+  margin: 0 0 10px 0;
+}
+body .spot__popup .spot__container .spot__close-button img {
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+}
+body .spot__popup .spot__container .spot__close-button:hover {
+  cursor: pointer;
+}
+body .spot__popup .spot__container .spot__save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  padding: 10px 0;
+  color: whitesmoke;
+  background-color: rgb(3, 66, 46);
+  font-size: 16px;
+  border: none;
+  transition: all 200ms ease-out;
+}
+body .spot__popup .spot__container .spot__save-button img {
+  color: whitesmoke;
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+}
+body .spot__popup .spot__container .spot__save-button:hover {
+  cursor: pointer;
+  background-color: rgba(3, 66, 36, 0.8);
+}
+body .spot__popup .spot__container .spot__image-container {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  margin-bottom: 20px;
+  background-color: whitesmoke;
+}
+body .spot__popup .spot__container .spot__image-container .spot__import-image-button {
+  padding: 10px 30px;
+  margin: auto;
+  color: whitesmoke;
+  background-color: rgb(3, 66, 46);
+  border-radius: 50px;
+  border: none;
+  transition: all 200ms ease-out;
+}
+body .spot__popup .spot__container .spot__image-container .spot__import-image-button:hover {
+  cursor: pointer;
+  background-color: rgba(3, 66, 36, 0.8);
+}
+body .spot__popup .spot__container .spot__info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+body .spot__popup .spot__container .spot__info .spot__country {
+  margin-left: 5px;
+}
+body .spot__popup .spot__container .spot__info .spot__city {
+  margin-left: 5px;
+}
+body .spot__popup .spot__container .spot__title {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+}
+body .spot__popup .spot__container .spot__title:focus {
+  outline: none;
+}
+body .spot__popup .spot__container .spot__description {
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+body .spot__popup .spot__container .spot__description:focus {
+  outline: none;
+}
+body .setting-box {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+}
+body .setting-box input {
+  margin-bottom: 20px;
+}
+body .tool-box {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: calc(50vw - 250px);
+  z-index: 1;
+  width: 500px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+body .tool-box .tool__button {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  transition: all 50ms ease-out;
+}
+body .tool-box .tool__button:hover {
+  transform: scale(1.2) translateY(-10px);
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

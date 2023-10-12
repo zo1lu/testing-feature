@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <title>Drawing Canvas</title>
+</head>
+<body>
+    <div class="tool-box">
+        <button class="tool-btn" id="draw" onclick="draw()">Draw</button>
+        <button class="tool-btn" id="circle" onclick="circle()">Circle</button>
+        <button class="tool-btn" id="polyline" onclick="polyline()">Polyline</button>
+        <button class="tool-btn" id="square" onclick="square()">Square</button>
+        <label>Brush Width:</label>
+        <input type="range" min="1" max="10" value="5" class="slider" id="brush_width" onchange="setBrushWidth()">
+        <label>Brush Color:</label>
+        <input type="color" id="brush_color" value="#ff0000" oninput="setBrushColor()">
+        <button class="tool-btn" id="zoom-in" onclick="zoomIn()">+</button>
+        <button class="tool-btn" id="zoom-out" onclick="zoomOut()">-</button>
+        <button class="tool-btn" id="clear_canvas" onclick="clearCanvas()">Clear</button>
+        <button class="tool-btn" id="save_canvas" onclick="saveCanvas()">Save</button>
+    </div>
+    <canvas class="canvas" id="canvas">
+
+    </canvas>
+</body>
+</html>

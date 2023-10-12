@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Using OpenLayers with Vite</title>
+  </head>
+  <body>
+    <div id="map" class="map">
+      <!-- <div id="popup" class="spot-container">
+        <div class="image-container"></div>
+        <input type="text" placeholder="Spot Title..."/>
+        <textarea placeholder="We saw three cat here..."></textarea>
+      </div> -->
+    </div>
+    <div class="spot-tool__container" id="spot_tool">
+      <button id="spot_edit" class="spot-tool__button" onclick="addSpotInfo()">Edit</button>
+      <button id="spot_delete" class="spot-tool__button">Delete</button>
+    </div>
+    <div class="spot__popup" id="spot_info_popup">
+      <div class="spot__container">          
+        <button class="spot__close-button" onclick="closePopup()">Close
+          <img src="/icon/001-close.png"/>
+        </button>
+        <div class="spot__image-container">
+          <button class="spot__import-image-button">Select Image</button>
+        </div>
+        <div class="spot__info">
+          <p>Country:<span id="country_text" class="spot__country"></span></p>
+          <p>City:<span id="city_text" class="spot__city"></span></p>
+        </div>
+        <input class="spot__title" type="text" placeholder="Spot Title..."/>
+        <textarea class="spot__description" placeholder="We saw three cat here..."></textarea>
+        <button class="spot__save-button">Save
+          <img src="/icon/003-save-white.png"/>
+        </button>
+      </div>
+    </div>
+    <div id="tool_box" class="tool-box">
+      <button id="set_mark" class="tool__button" value="Mark" onclick="setTool(this)">
+        <img src="/icon/002-location.png"/>
+      </button>
+      <button id="draw_route" class="tool__button" value="Route" onclick="setTool(this)">
+        <img src="/icon/007-send.png"/>
+      </button>
+      <button id="draw_line" class="tool__button" value="LineString" onclick="setTool(this)">
+        <img src="/icon/003-line.png"/>
+      </button>
+      <button id="draw_polygon" class="tool__button" value="Polygon" onclick="setTool(this)">
+        <img src="/icon/004-square.png"/>
+      </button>
+      <button id="draw_circle" class="tool__button" value="Circle" onclick="setTool(this)">
+        <img src="/icon/006-dry-clean.png"/>
+      </button>
+      <button id="draw_by_pen" class="tool__button" value="Pen" onclick="setTool(this)">
+        <img src="/icon/009-pencil-1.png"/>
+      </button>
+      <button id="draw_by_brush" class="tool__button" value="Brush" onclick="setTool(this)">
+        <img src="/icon/001-paint-brush.png"/>
+      </button>
+    </div>
+    <div id="setting_box" class="setting-box">
+      <label>Brush Width:</label>
+      <input type="range" min="1" max="10" value="5" class="slider" id="brush_width" onchange="setBrushWidth(this)">
+      <label>Brush Color:</label>
+      <input type="color" id="brush_color" value="#ffcc33" oninput="setBrushColor(this)">
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./main_draw.js"></script>
+  </body>
+</html>
